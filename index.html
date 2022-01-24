@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,32 +11,70 @@
     <script src="scripts.js"></script>
 
 </head>
+
 <body>
+    <div class="end-screen d-none">
+    <img id="game-over" class="GameOver d-none" src="./img/GameOver.png">
+    <button onclick="restart()" class="restart-btn d-none" id="restart">Restart</button>
+</div>
+    <div class="player_panel">
+        <div class="player_inactive" id="player_1">
+            <img src="./img/O.png" class="object_head"> Player 1
+        </div>
+        <div class="player_active" id="player_2">
+            <img src="./img/X.png" class="object_head"> Player 2
+        </div>
+    </div>
+
+<div id="victory-line0" class="horizontal_line" style="top: 220px;"></div>
+<div id="victory-line1" class="horizontal_line" style="top: 356px;"></div>
+<div id="victory-line2" class="horizontal_line" style="top: 494px;"></div>
+<div id="victory-line3" class="horizontal_line" style="left: 390px; top: 356px; transform: rotate(90deg) scaleX(0.0); "></div>
+<div id="victory-line4" class="horizontal_line" style="right: 530px; top: 356px; transform: rotate(90deg) scaleX(0.0); "></div>
+<div id="victory-line5" class="horizontal_line" style="right: 390px; top: 356px; transform: rotate(90deg) scaleX(0.0); "></div>
+<div id="victory-line6" class="horizontal_line" style="right: 530px; top: 356px; transform: rotate(45deg) scaleX(0.0); "></div>
+<div id="victory-line7" class="horizontal_line" style="right: 530px; top: 356px; transform: rotate(-45deg) scaleX(0.0); "></div>
+
+
+
+
+
+
     <table>
         <tr>
-            <td onclick="fillShape(0)"><img src="./img/O.png" class="d-none"> 
-                <img src="./img/X.png" class="d-none"></td>
-            <td onclick="fillShape(1)"><img src="./img/O.png" class="d-none"> 
-                <img src="./img/X.png" class="d-none"></td>
-            <td onclick="fillShape(2)"><img src="./img/O.png" class="d-none"> 
-                <img src="./img/X.png" class="d-none"></td>
+            <td onclick="fillShape(0)"><img id="O-0" src="./img/O.png" class="d-none object">
+                <img id="X-0" src="./img/X.png" class="d-none object">
+            </td>
+            <td onclick="fillShape(1)"><img id="O-1" src="./img/O.png" class="d-none object">
+                <img id="X-1" src="./img/X.png" class="d-none object">
+            </td>
+            <td onclick="fillShape(2)"><img id="O-2" src="./img/O.png" class="d-none object">
+                <img id="X-2" src="./img/X.png" class="d-none object">
+            </td>
         </tr>
         <tr>
-            <td onclick="fillShape(3)"><img src="./img/O.png" class="d-none"> 
-                <img src="./img/X.png" class="d-none"></td>
-            <td onclick="fillShape(4)"><img src="./img/O.png" class="d-none"> 
-                <img src="./img/X.png" class="d-none"></td>
-            <td onclick="fillShape(5)"><img src="./img/O.png" class="d-none"> 
-                <img src="./img/X.png" class="d-none"></td>
+            <td onclick="fillShape(3)"><img id="O-3" src="./img/O.png" class="d-none object">
+                <img id="X-3" src="./img/X.png" class="d-none object">
+            </td>
+            <td onclick="fillShape(4)"><img id="O-4" src="./img/O.png" class="d-none object">
+                <img id="X-4" src="./img/X.png" class="d-none object">
+            </td>
+            <td onclick="fillShape(5)"><img id="O-5" src="./img/O.png" class="d-none object">
+                <img id="X-5" src="./img/X.png" class="d-none object">
+            </td>
         </tr>
         <tr>
-            <td onclick="fillShape(6)"><img src="./img/O.png" class="d-none"> 
-                <img src="./img/X.png" class="d-none"></td>
-            <td onclick="fillShape(7)"><img src="./img/O.png" class="d-none"> 
-                <img src="./img/X.png" class="d-none"></td>
-            <td onclick="fillShape(8)"><img src="./img/O.png" class="d-none"> 
-                <img src="./img/X.png" class="d-none"></td>
+            <td onclick="fillShape(6)"><img id="O-6" src="./img/O.png" class="d-none object">
+                <img id="X-6" src="./img/X.png" class="d-none object">
+            </td>
+            <td onclick="fillShape(7)"><img id="O-7" src="./img/O.png" class="d-none object">
+                <img id="X-7" src="./img/X.png" class="d-none object">
+            </td>
+            <td onclick="fillShape(8)"><img id="O-8" src="./img/O.png" class="d-none object">
+                <img id="X-8" src="./img/X.png" class="d-none object">
+            </td>
         </tr>
     </table>
 </body>
+
 </html>
