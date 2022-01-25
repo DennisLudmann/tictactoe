@@ -13,15 +13,15 @@
 </head>
 
 <body>
-    <div class="end-screen d-none">
+    <div class="end-screen" style="height: 0vh;">
     <img id="game-over" class="GameOver d-none" src="./img/GameOver.png">
     <button onclick="restart()" class="restart-btn d-none" id="restart">Restart</button>
 </div>
     <div class="player_panel">
-        <div class="player_inactive" id="player_1">
+        <div class="player player_inactive bg-blue" id="player_1">
             <img src="./img/O.png" class="object_head"> Player 1
         </div>
-        <div class="player_active" id="player_2">
+        <div class="player bg-red" id="player_2">
             <img src="./img/X.png" class="object_head"> Player 2
         </div>
     </div>

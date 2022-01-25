@@ -49,7 +49,8 @@ table {
 .d-none {
     display: none;
 }
-.end-screen{
+
+.end-screen {
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -57,10 +58,12 @@ table {
     z-index: 2;
 
 }
+
 .object_head {
     width: 80px;
     padding: 16px;
-    mix-blend-mode: multiply;
+    border-radius: 100px;
+   
 }
 
 .player_panel {
@@ -83,8 +86,17 @@ table {
     opacity: 0.4;
 }
 
-.player_active {
-    background-color: #cbb7cb;
+.bg-red {
+    background-color: rgb(255, 56, 61);
+    color: white;
+}
+
+.bg-blue {
+    background-color: rgb(28, 11, 127);
+    color: white;
+}
+
+.player {
     border-radius: 14px;
     padding-right: 8px;
 }
@@ -104,7 +116,7 @@ table {
     position: absolute;
     z-index: 3;
     animation: zoomIn 225ms ease-in-out;
-   
+
 
 }
 
@@ -124,11 +136,12 @@ table {
     bottom: 60px;
     z-index: 10;
     animation: zoomIn 750ms ease-in-out;
-   }
+}
 
-.restart-btn:hover{
+.restart-btn:hover {
     background: #a55356;
 }
+
 @keyframes zoomIn {
     from {
         opacity: 0;

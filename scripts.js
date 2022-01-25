@@ -10,14 +10,12 @@ function fillShape(id) {
             currentShape = 'O';
             document.getElementById('player_1').classList.remove('player_inactive');
             document.getElementById('player_2').classList.add('player_inactive');
-            document.getElementById('player_2').classList.remove('player_active');
-            document.getElementById('player_1').classList.add('player_active');
+           
         } else {
             currentShape = 'X';
             document.getElementById('player_2').classList.remove('player_inactive');
             document.getElementById('player_1').classList.add('player_inactive');
-            document.getElementById('player_1').classList.remove('player_active');
-            document.getElementById('player_2').classList.add('player_active');
+           
         }
         fields[id] = currentShape;
         console.log(fields);
@@ -95,20 +93,12 @@ function checkForVictory() {
         document.getElementById('victory-line7').style.transform = 'rotate(-45deg) scaleX(1.3)';
     }
     if (winner) {
+        
         gameOver = true;            // to make the game not continue (its set to false as default)
         setTimeout(function () {      //to show GameOver img and delay the display for a 1sek.
             document.getElementById('game-over').classList.remove('d-none');
             document.getElementById('restart').classList.remove('d-none');
         }, 1000);
-        
+        document.getElementById('end-screen').style = '';
     }
 }
-setTimeout(function() {
-    // after 1000ms, call the `setTimeout` callback
-    // In the meantime, continue executing code below
-    setTimeout(function() {
-      function1() //runs second after 1100ms
-    },100)
-  
-    function2() //runs first, after 1000ms
-  },1000)
